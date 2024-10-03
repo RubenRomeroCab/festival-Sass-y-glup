@@ -1,0 +1,6 @@
+//@use 'base/variables' as *; // use para acceder a variables
+//@forward 'base/normalize'; //forward para tarer toda la hoja sin funciones
+
+@forward 'base';
+
+@forward 'layout';
