@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixin' as m;
+
+.video{
+    //PARA PODER POSICIONAR COSAS ENCIMA DE OTRAS 
+
+    position: relative; //el padre siempre tiene que tener posicion relativa
+    min-height:50rem;
+    max-height: 70rem;
+    overflow: hidden; //La propiedad overflow: hidden; oculta el contenido que excede el tamaño del contenedor, evitando que se muestre o se desplace fuera de sus límites.
+    .overlay{
+
+        position: absolute;// el hijo absuluta
+   
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado,60%), 
+            rgba(darken(v.$morado , 20%) ,90% )  
+            
+        );
+
+        inset: 0; //inset lo que hace es tomar todo el ancho del video sin tener que pasar mas cordenadas 
+        display: flex;
+        align-items: center;
+    }
+
+    video{
+        display: block;
+        width: auto;
+        @include m.pc{
+            width: 100%;
+        }
+    }
+}
+
+.contenido-video{
+    z-index: 10; // podemos controlar la posicion de los elementos si esta detras de algo no podemos acceder a el pero con z-index lo podemos adelantar 
+    h2{
+        color: v.$blanco;
+        font-size: 7rem;
+        margin: 0;
+    }
+
+    p{
+
+        background-color: v.$rosa;
+        display: inline-block; //display inline toma lo que ocupa el texto a un display inline no le podemos agregar margenes a un inline-block si podemos agregarle margenes
+        padding: 1rem 2rem;
+        color: v.$blanco;
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin: 0;
+    }
+}
