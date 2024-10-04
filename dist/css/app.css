@@ -562,6 +562,12 @@ body > section {
   }
 }
 
+.pase {
+  transition: transform 0.3s ease-in-out;
+}
+.pase:hover {
+  transform: scale(1.1);
+}
 .pase-nombre {
   font-size: 3.6rem;
   font-weight: 900;
@@ -584,6 +590,18 @@ body > section {
   font-size: 2rem;
   padding: 1rem 0;
 }
+.pase-body {
+  background-color: #FFFFFF;
+}
+.pase-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pase-body ul li {
+  padding: 2rem;
+  border-bottom: 1px solid #e1e1e1;
+}
 .pase-footer {
   background-color: #FFFFFF;
   padding: 3rem;
@@ -594,4 +612,20 @@ body > section {
   background-color: #752F97;
   padding: 1rem 0;
   border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.pase-footer p:hover {
+  transform: scale(1.1);
+  background-color: rgb(56.7272727273, 22.7878787879, 73.2121212121);
+}
+
+.footer {
+  background-color: #F53756;
+  padding: 2rem 0;
+}
+.footer p {
+  margin: 0;
+  color: #FFFFFF;
+  text-align: center;
 }
