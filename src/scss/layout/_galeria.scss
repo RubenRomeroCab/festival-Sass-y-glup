@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+@use 'base/mixin' as m;
+
+
+.galeria{
+    @include m.contenedor;
+
+    &-imagenes{
+        @include m.grid;
+
+        img{
+            height: 20rem;
+            object-fit: cover;
+        }
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    background-color: v.$negro;
+}

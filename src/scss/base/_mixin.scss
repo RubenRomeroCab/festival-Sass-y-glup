@@ -44,3 +44,9 @@
     list-style: none;
 
 }
+
+@mixin gridp($column){
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+    gap: 5rem;
+}
