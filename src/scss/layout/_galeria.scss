@@ -6,7 +6,24 @@
     @include m.contenedor;
 
     &-imagenes{
-        @include m.grid;
+        @include m.gridp(1);
+
+        @include m.telefono{
+            @include m.gridp(1);
+        }
+
+        @include m.tablet{
+            @include m.gridp(3);
+        }
+
+        @include m.pc{
+            @include m.gridp(4);
+        }
+
+        @include m.pcGrande{
+            @include m.gridp(4);
+        }
+
 
         img{
             height: 20rem;
@@ -15,10 +32,43 @@
     }
 }
 
+//modal es el div que hemos creado desde el app.js
 .modal{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 30px;
-    background-color: v.$negro;
+    inset: 0;
+    background-color:rgba( v.$negro , 0.5) ;
+    display: grid;
+    place-items: center;
+    animation: fadeIn ease-in 0.5s;
+    
+
+  
+
+    img{
+        max-width: 80rem;
+    }
 }
+
+.btn-cerrar{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$blanco;
+    border: none;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+       opacity: 1;
+    }
+
+}
+
