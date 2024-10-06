@@ -635,6 +635,7 @@ body > section {
 }
 .contenedor-boletos h3 {
   color: #FFFFFF;
+  margin-top: 5rem;
 }
 .contenedor-boletos .boletos {
   width: 95%;
